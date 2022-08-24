@@ -1,6 +1,6 @@
 # Operation_Fortress
 
-&lt;Group Project/Team Juggernauts>
+&lt;App Built Like A FORTRESS!>
 
 | [Description](#description) | [Features](#features) | [Technology](#technology) |  
 

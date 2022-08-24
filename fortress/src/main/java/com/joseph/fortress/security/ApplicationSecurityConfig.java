@@ -32,12 +32,12 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "index", "/css/*", "/js/*")
-                .permitAll()
+                .antMatchers("/", "index", "/css/*", "/js/*").permitAll()// these specific patterns do NOT require Basic Auth
+                .antMatchers("/api/**").hasRole(ApplicationUserRole.STUDENT.name()) // protects this API
                 .anyRequest()
                 .authenticated()
                 .and()
-                .httpBasic();
+                .httpBasic();   // Basic Auth
     }
 
     /**
@@ -57,16 +57,17 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 .username("Todd")
                 // Without password encoded, server/app will generate exceptions or give error message
                 .password(passwordEncoder.encode("password"))
-                .roles("STUDENT")   //ROLE_STUDENT
+                .roles(ApplicationUserRole.STUDENT.name())   // Here we add our defined ENUM role
                 .build();
 
         /**
          * Here we create our ADMIN user, Carlos
          */
 
-        UserDetails carlosUser = User.builder()                .username("Carlos")
+        UserDetails carlosUser = User.builder()
+                .username("Carlos")
                 .password(passwordEncoder.encode("password123"))
-                .roles("ADMIN")
+                .roles(ApplicationUserRole.ADMIN.name())    // Here we add our defined ENUM role
                 .build();
 
         return new InMemoryUserDetailsManager(

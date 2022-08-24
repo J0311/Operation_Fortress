@@ -15,7 +15,7 @@ A really cool repo/side project I'm working on as I learn more about Spring Boot
 - Form-Based Authentication
 - Base Authentication 
 - Encoded Password (Bcryption)
-- Admin & User roles
+- Role-Based Authentication
 
 ## Technology
 

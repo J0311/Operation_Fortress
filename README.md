@@ -8,7 +8,6 @@
 
 A really cool side project I'm working on as I learn more about Spring Boot Security.
 
-
 ## Features
 
 - Thus far.... 

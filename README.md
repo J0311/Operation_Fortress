@@ -7,6 +7,7 @@
 ## Description
 
 A really cool side project I'm working on as I learn more about Spring Boot Security.
+The goal is to containerize and deploy on a cloud platform.
 
 ## Features
 

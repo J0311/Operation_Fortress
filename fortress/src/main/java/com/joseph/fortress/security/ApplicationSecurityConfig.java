@@ -53,6 +53,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
         /**
          * Here we create our STUDENT user, Todd
          */
+        
         UserDetails toddUser = User.builder()
                 .username("Todd")
                 // Without password encoded, server/app will generate exceptions or give error message

@@ -1,7 +1,5 @@
 # Operation_Fortress
 
-&lt;App Built Like A FORTRESS!>
-
 | [Description](#description) | [Features](#features) | [Technology](#technology) |  
 
 ## Description

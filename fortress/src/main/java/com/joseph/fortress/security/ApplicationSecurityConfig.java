@@ -70,6 +70,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 .password(passwordEncoder.encode("password123"))
                 .roles(ApplicationUserRole.ADMIN.name())    // Here we add our defined ENUM role
                 .build();
+        
 
         return new InMemoryUserDetailsManager(
                 toddUser,       // role of STUDENT

@@ -29,7 +29,7 @@ Key technologies and librariesdependencies used in this project:
 - Lombok Library
 - Guava Libray
 - Javax Servlet
-- IntelliJ IDEA IDE
+- IntelliJ IDEA 
 - JUnit
 - Tomcat Web Server
 - Git
